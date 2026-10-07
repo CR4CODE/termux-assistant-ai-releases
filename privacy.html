@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Политика конфиденциальности — Termux Assistant AI</title>
+<meta name="description" content="Политика конфиденциальности приложения Termux Assistant AI: какие данные обрабатываются, какие разрешения используются.">
+<style>
+:root{--bg:#121214;--card:#1A1A1D;--input:#232326;--text:#E8E5DF;--muted:#8A8780;--accent:#22C55E;--divider:#2A2A2E;--border:#14E8E5DF}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+.wrap{max-width:820px;margin:0 auto;padding:48px 24px}
+h1{font-size:clamp(1.6rem,4vw,2.2rem);margin:0 0 8px;font-weight:800}
+h2{font-size:1.25rem;margin:36px 0 12px;color:var(--accent);font-weight:700}
+h3{font-size:1.05rem;margin:22px 0 8px;font-weight:600}
+p,ul{margin:8px 0}
+ul{padding-left:22px}
+li{margin:4px 0}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.meta{color:var(--muted);font-size:.9rem;margin-bottom:32px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px 24px;margin:20px 0}
+.top{display:flex;justify-content:space-between;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--divider);margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.brand{font-weight:800;font-size:1.1rem;color:var(--accent);letter-spacing:.02em}
+.back{padding:8px 16px;border-radius:10px;background:var(--input);border:1px solid var(--divider);color:var(--text);font-size:.9rem}
+code{background:var(--input);padding:2px 8px;border-radius:6px;font-size:.9em}
+footer{margin-top:48px;padding-top:24px;border-top:1px solid var(--divider);color:var(--muted);font-size:.88rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top">
+  <div class="brand">Termux Assistant AI</div>
+  <a class="back" href="index.html">← На главную</a>
+</div>
+<h1>Политика конфиденциальности</h1>
+<p class="meta">Приложение: <strong>Termux Assistant AI</strong> · Пакет: <code>com.termux.assistant</code><br>Дата вступления в силу: 5 октября 2026 г.</p>
+
+<h2>1. Общие сведения</h2>
+<p>Termux Assistant AI — открытое приложение для разработчиков и продвинутых пользователей Android, работающее в связке с Termux (эмулятором терминала Linux).</p>
+<ul>
+  <li>Разработчик: <strong>CR4CODE</strong></li>
+  <li>Контакт: <a href="https://vk.com/termuxai">vk.com/termuxai</a> · <a href="https://t.me/termux_assistant_ai">t.me/termux_assistant_ai</a></li>
+  <li>Исходный код: <a href="https://github.com/CR4CODE/Termux-Assistant-AI">github.com/CR4CODE/Termux-Assistant-AI</a></li>
+</ul>
+
+<h2>2. Какие данные обрабатывает приложение</h2>
+<div class="card">
+<p><strong>Все данные обрабатываются исключительно локально на вашем устройстве.</strong> Приложение не имеет собственных серверов и не передаёт данные разработчику.</p>
+<p>Локально могут сохраняться:</p>
+<ul>
+  <li>История команд и задач</li>
+  <li>Настройки приложения (тема, акцентный цвет, параметры Vibe)</li>
+  <li>Логи работы в <code>/sdcard/ai-tasker/logs/</code></li>
+  <li>Собранные APK в <code>/sdcard/Download/</code></li>
+  <li>Черновики постов в <code>/sdcard/ai-tasker/{inbox,outbox}/</code></li>
+</ul>
+<p>Эти данные остаются на устройстве, пока вы сами их не удалите.</p>
+</div>
+
+<h2>3. Какие данные НЕ собираются</h2>
+<p>Приложение <strong>не собирает</strong> и <strong>не передаёт</strong> разработчику:</p>
+<ul>
+  <li>Персональные данные (имя, телефон, email)</li>
+  <li>Идентификаторы устройства (IMEI, Android ID, рекламные ID)</li>
+  <li>Геолокацию</li>
+  <li>Аналитику использования</li>
+  <li>Список установленных приложений</li>
+</ul>
+<p>Приложение <strong>не содержит</strong> рекламы, трекеров, SDK аналитики и платежей.</p>
+
+<h2>4. Взаимодействие с внешними сервисами</h2>
+
+<h3>4.1. DeepSeek (chat.deepseek.com)</h3>
+<p>При использовании AI-функций (генерация кода, постов, парсинг URL) приложение открывает WebView и взаимодействует с веб-интерфейсом DeepSeek по инициативе пользователя. Введённые запросы отправляются на серверы DeepSeek в соответствии с их <a href="https://chat.deepseek.com/">политикой конфиденциальности</a>.</p>
+<p>Приложение не перехватывает и не сохраняет ваши диалоги с DeepSeek — только передаёт текст и читает ответ.</p>
+
+<h3>4.2. ВКонтакте (vk.com)</h3>
+<p>При публикации постов в сообщество ВКонтакте приложение вызывает VK API от вашего имени, используя ваш токен доступа, сохранённый локально в приватной папке Termux (<code>~/.config/ai-tasker/vk.json</code>).</p>
+
+<h3>4.3. Termux (локальное окружение)</h3>
+<p>Приложение отправляет задачи на локальный HTTP-сервер <code>ai-tasker-server</code> (127.0.0.1:8767), работающий внутри Termux на том же устройстве. Никакие данные не покидают устройство.</p>
+
+<h2>5. Разрешения и их назначение</h2>
+<p>Приложение запрашивает следующие разрешения:</p>
+<ul>
+  <li><strong>SYSTEM_ALERT_WINDOW</strong> — оверлей обучающего туториала и диалога установки APK</li>
+  <li><strong>POST_NOTIFICATIONS</strong> — уведомления о статусе задач</li>
+  <li><strong>RECORD_AUDIO</strong> — голосовой ввод команд (только по действию пользователя)</li>
+  <li><strong>READ/WRITE_EXTERNAL_STORAGE</strong> — чтение и запись APK, логов в <code>/sdcard/ai-tasker/</code> и <code>/sdcard/Download/</code></li>
+  <li><strong>MANAGE_EXTERNAL_STORAGE</strong> — управление собранными APK в <code>/sdcard/Download/</code></li>
+  <li><strong>REQUEST_INSTALL_PACKAGES</strong> — установка APK, собранных пользователем в Termux</li>
+  <li><strong>FOREGROUND_SERVICE</strong> — работа сервиса автономной сборки (Vibe)</li>
+  <li><strong>ACCESSIBILITY_SERVICE</strong> (опционально) — вспомогательный сервис автоматизации, включается пользователем вручную</li>
+</ul>
+<p>Все разрешения используются только для заявленной функциональности.</p>
+
+<h2>6. Безопасность</h2>
+<ul>
+  <li>Все токены и ключи хранятся локально в приватной папке Termux с правами <code>600</code></li>
+  <li>Связь с локальным сервером идёт только через <code>127.0.0.1</code> (внутри устройства)</li>
+  <li>Открытый исходный код позволяет независимо проверить отсутствие скрытой передачи данных</li>
+</ul>
+
+<h2>7. Права пользователя</h2>
+<p>Вы в любой момент можете:</p>
+<ul>
+  <li>Удалить приложение и все его данные (включая файлы в <code>/sdcard/ai-tasker/</code>)</li>
+  <li>Отозвать разрешения в настройках Android</li>
+  <li>Очистить токены в <code>~/.config/ai-tasker/</code></li>
+</ul>
+
+<h2>8. Дети</h2>
+<p>Приложение не предназначено для детей младше 16 лет и не собирает данные о них.</p>
+
+<h2>9. Изменения политики</h2>
+<p>Актуальная версия всегда доступна по адресу: <a href="https://cr4code.github.io/Termux-Assistant-AI/privacy.html">cr4code.github.io/Termux-Assistant-AI/privacy.html</a>. При существенных изменениях дата обновления будет пересмотрена.</p>
+
+<h2>10. Контакты</h2>
+<p>По вопросам, связанным с обработкой данных:</p>
+<ul>
+  <li>ВКонтакте: <a href="https://vk.com/termuxai">vk.com/termuxai</a></li>
+  <li>Telegram: <a href="https://t.me/termux_assistant_ai">t.me/termux_assistant_ai</a></li>
+  <li>GitHub Issues: <a href="https://github.com/CR4CODE/Termux-Assistant-AI/issues">github.com/CR4CODE/Termux-Assistant-AI/issues</a></li>
+</ul>
+
+<footer>
+Используя приложение, вы соглашаетесь с настоящей политикой конфиденциальности.<br>
+© 2026 CR4CODE · <a href="index.html">На главную</a> · <a href="https://github.com/CR4CODE/Termux-Assistant-AI">GitHub</a>
+</footer>
+</div>
+</body>
+</html>
